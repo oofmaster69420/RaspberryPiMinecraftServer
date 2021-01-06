@@ -4,7 +4,8 @@
 # Modified by Joey Reinhart on Jan 5th 2021
 
 echo "Minecraft Server installation script by James Chambers and Marc Tönsing - V1.0"
-echo "Latest version always at https://github.com/mtoensing/RaspberryPiMinecraft"
+echo "Modified by Joey Reinhart"
+echo "Latest version always at https://github.com/oofmaster69420/RaspberryPiMinecraftServer"
 
 if [ -d "minecraft" ]; then
   echo "Directory minecraft already exists!  Exiting... "
@@ -34,24 +35,24 @@ echo "Accepting the EULA... "
 echo eula=true > eula.txt
 
 echo "Grabbing run.sh from repository... "
-wget -O run.sh https://raw.githubusercontent.com/oofmaster69420/RaspberryPiMinecraft/master/run.sh
+wget -O run.sh https://raw.githubusercontent.com/oofmaster69420/RaspberryPiMinecraftServer/master/run.sh
 chmod +x run.sh
 
 TotalMemory=$(awk '/MemTotal/ { printf "%.0f\n", $2/1024 }' /proc/meminfo)
 if [ $TotalMemory -lt 6000 ]; then
   rm run.sh
-  wget -O run.sh https://raw.githubusercontent.com/oofmaster69420/RaspberryPiMinecraft/master/run_lowspec.sh
+  wget -O run.sh https://raw.githubusercontent.com/oofmaster69420/RaspberryPiMinecraftServer/master/run_lowspec.sh
   chmod +x run.sh
 fi
 
 if [ $TotalMemory -lt 2500 ]; then
   rm run.sh
-  wget -O run.sh https://raw.githubusercontent.com/oofmaster69420/RaspberryPiMinecraft/master/run_superlowspec.sh
+  wget -O run.sh https://raw.githubusercontent.com/oofmaster69420/RaspberryPiMinecraftServer/master/run_superlowspec.sh
   chmod +x run.sh
 fi
 
 echo "Grabbing restart.sh from repository... "
-wget -O restart.sh https://raw.githubusercontent.com/oofmaster69420/RaspberryPiMinecraft/master/restart.sh
+wget -O restart.sh https://raw.githubusercontent.com/oofmaster69420/RaspberryPiMinecraftServer/master/restart.sh
 chmod +x restart.sh
 
 echo "Enter a name for your server "
