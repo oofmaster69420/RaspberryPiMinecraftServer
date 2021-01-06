@@ -3,7 +3,8 @@
 # Marc Tönsing - V1.2 - September 16th 2019
 # Modified by Joey Reinhart on Jan 5th 2021
 # Minecraft Server super low spec startup script using screen
+user=$(whoami)
 echo "Starting Minecraft server.  To view window type screen -r minecraft."
 echo "To minimize the window and let the server run in the background, press Ctrl+A then Ctrl+D"
-cd /home/pi/minecraft/
-/usr/bin/screen -dmS minecraft /usr/bin/java -jar -Xms1200M -Xmx1200M -Dcom.mojang.eula.agree=true /home/pi/minecraft/server.jar
+cd /home/$user/minecraft/
+/usr/bin/screen -dmS minecraft /usr/bin/java -jar -Xms1200M -Xmx1200M -Dcom.mojang.eula.agree=true /home/$user/minecraft/server.jar
