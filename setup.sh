@@ -61,3 +61,5 @@ echo "motd=$servername" >> server.properties
 
 echo "Setup is complete. To run the server go to the minecraft directory and type ./run.sh"
 echo "Don't forget to set up port forwarding on your router. The default port is 25565"
+echo "Don't forget to set up the server.properties file to your liking."
+echo "You can add plugins by placing the plugin files in the plugins folder inside the minecraft server directory"
