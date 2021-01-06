@@ -1,7 +1,7 @@
 #!/bin/sh
 # Marc Tönsing - V1.1 - 25.08.2020
 # Modified by Joey Reinhart
-# Minecraft Server restart and pi reboot.
+# Minecraft Server restart & update and pi reboot.
 screen -Rd minecraft -X stuff "say Server is restarting in 5 seconds! $(printf '\r')"
 sleep 1s
 screen -Rd minecraft -X stuff "say Server is restarting in 4 seconds! $(printf '\r')"
