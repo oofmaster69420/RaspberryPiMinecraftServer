@@ -31,7 +31,7 @@ mkdir minecraft
 cd minecraft
 
 echo "Getting latest Paper Minecraft server..."
-wget -O server.jar https://papermc.io/api/v2/projects/paper/versions/1.17.1/builds/104/downloads/paper-1.17.1-104.jar
+wget -O server.jar https://papermc.io/api/v2/projects/paper/versions/1.17.1/builds/276/downloads/paper-1.17.1-276.jar
 
 echo "Building the Minecraft server... "
 java -jar server.jar
